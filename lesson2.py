@@ -69,3 +69,4 @@ first = 3 / 10 * 2 / 9
 second = 2 / 11 * 1 / 10
 p_balls = 1 - first * second
 print(f'Ответ 4в: {p_balls} или {p_balls:.2%}')
+# Ответ 4в: 0.9987878787878788 или 99.88%
