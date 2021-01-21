@@ -4,11 +4,13 @@ from math import factorial
 
 
 def combinations(total_n, quantity):
-    return int(factorial(total_n) / (factorial(quantity) * factorial(total_n - quantity)))
+    return int(factorial(total_n) / (
+                factorial(quantity) * factorial(total_n - quantity)))
 
 
 def bernulli(total_n, quantity, probability):
-    return combinations(total_n, quantity) * pow(probability, quantity) * pow(1 - probability, total_n - quantity)
+    return combinations(total_n, quantity) * pow(probability, quantity) * pow(
+        1 - probability, total_n - quantity)
 
 
 def puasson(lambda_m, m):
@@ -61,9 +63,10 @@ p_balls = first * second
 print(f'Ответ 4а: {p_balls} или {p_balls:.2%}')
 # Ответ 4а: 0.30545454545454537 или 30.55%
 # б) благопритные исходы: 1(БЧ) + 2(БЧ) или 1(ЧЧ) + 2(ББ) или 1(ББ) + 2(ЧЧ)
-p_balls = 7 / 10 * 3 / 10 * 9 / 11 * 2 / 11 + 3 / 10 * 2 / 9 * 9 / 11 * 8 / 10 + 7 / 10 * 6 / 9 * 2 / 11 * 1 / 10
+p_balls = (7 / 10 * 3 / 9 + 3 / 10 * 7 / 9) * (9 / 11 * 2 / 10 + 2 / 11 * 9 / 10) \
+          + 3 / 10 * 2 / 9 * 9 / 11 * 8 / 10 + 7 / 10 * 6 / 9 * 2 / 11 * 1 / 10
 print(f'Ответ 4б: {p_balls} или {p_balls:.2%}')
-# Ответ 4б: 0.08336088154269972 или 8.34%
+# Ответ 4б: 0.20484848484848484 или 20.48%
 # в) Р(благоприятный исход) =  1 - P(неблагопритный исход: взяли 1(ЧЧ) и 2(ЧЧ))
 first = 3 / 10 * 2 / 9
 second = 2 / 11 * 1 / 10
