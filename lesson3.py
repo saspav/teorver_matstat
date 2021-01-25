@@ -37,17 +37,17 @@ print(f'# НЕ смещенная дисперсия={sum_dq / (len(pays) - 1):.
 # Какова вероятность того, что 3 мяча белые?
 # Решение:
 # благоприятные исходы:
-# 1(2Б1Ч) + 2(1Б3Ч) или 1(1Б2Ч) + 2(2Б2Ч) или 1(0Б2Ч) + 2(3Б1Ч)
+# 1(2Б0Ч) + 2(1Б3Ч) или 1(1Б1Ч) + 2(2Б2Ч) или 1(0Б2Ч) + 2(3Б1Ч)
 # расчет сочетаниями:
-p_balls1 = combinations(5, 2) * combinations(3, 1) / combinations(8, 2) * \
+p_balls1 = combinations(5, 2) / combinations(8, 2) * \
            combinations(5, 1) * combinations(7, 3) / combinations(12, 4)
-p_balls2 = combinations(5, 1) * combinations(3, 2) / combinations(8, 2) * \
+p_balls2 = combinations(5, 1) * combinations(3, 1) / combinations(8, 2) * \
            combinations(5, 2) * combinations(7, 2) / combinations(12, 4)
 p_balls3 = combinations(3, 2) / combinations(8, 2) * \
            combinations(5, 3) * combinations(7, 1) / combinations(12, 4)
 p_balls = p_balls1 + p_balls2 + p_balls3
 print(f'# Ответ 2: {p_balls} или {p_balls:.2%}')
-# Ответ 2: 0.6212121212121211 или 62.12%
+# Ответ 2: 0.3686868686868686 или 36.87%
 
 # 3. На соревновании по биатлону один из трех спортсменов стреляет и попадает
 # в мишень. Вероятность попадания для первого спортсмена равна 0.9,
