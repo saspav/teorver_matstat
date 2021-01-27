@@ -94,7 +94,7 @@ for height, condition, symbol in zip(h, c, letters):
 
 # для подтверждения правила трех сигм нужно было добавить условие:
 # случайным образом выбранный взрослый человек имеет рост:
-# з). от 158 см до 190 см
+# з). от 150 см до 198 см
 height, condition, symbol = (150, 198), ('>', '<'), 'з'
 p_value_low = st.norm.cdf(calc_z(height[0]))
 p_value_high = st.norm.cdf(calc_z(height[1]))
